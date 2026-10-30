@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Championship Registration Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(180deg, #d3c7ef 0%, #dbf0fd 50%, #bbf4f8 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .maincontainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 620px;
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #51429d;
+            font-size: 32px;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        h3 {
+            color: #6558a8;
+            font-size: 15px;
+            font-weight: 500;
+            margin: 18px 0 8px 0;
+        }
+
+        h3 span {
+            color: #e3526a;
+            margin-left: 2px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"] {
+            width: 100%;
+            height: 42px;
+            border: none;
+            border-radius: 4px;
+            background-color: #ffffff;
+            padding: 0 12px;
+            font-size: 15px;
+            color: #333333;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #cccccc;
+        }
+
+        .name-row {
+            display: flex;
+            gap: 16px;
+        }
+
+        .name-row div {
+            flex: 1;
+        }
+
+        .captcha-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .captcha-container {
+            background-color: #f9f9f9;
+            border: 1px solid #d3d3d3;
+            border-radius: 3px;
+            width: 302px;
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .captcha-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .captcha-checkbox {
+            width: 28px;
+            height: 28px;
+            border: 2px solid #c1c1c1;
+            border-radius: 2px;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .captcha-text {
+            color: #2b2b2b;
+            font-size: 14px;
+            font-family: Roboto, helvetica, arial, sans-serif;
+        }
+
+        .captcha-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .captcha-brand-text {
+            color: #555555;
+            font-size: 8px;
+            font-family: Roboto, helvetica, arial, sans-serif;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+
+
+        .submit-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .submit-btn {
+            background-color: #0056cf;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 36px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .submit-btn:hover {
+            background-color: #0046b0;
+        }
+
+        .submit-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            transform: rotate(-15deg);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="maincontainer">
+        <div class="container">
+            <form>
+                <h1>School Championship Registration Form</h1>
+                
+                <h3>School name:<span>*</span></h3>
+                <input type="text">
+                
+                <h3>Schooler name:<span>*</span></h3>
+                <div class="name-row">
+                    <div>
+                        <input type="text" placeholder="First">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Last">
+                    </div>
+                </div>
+                
+                <h3>Parent name:<span>*</span></h3>
+                <div class="name-row">
+                    <div>
+                        <input type="text" placeholder="First">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Last">
+                    </div>
+                </div>
+                
+                <h3>Parent phone:<span>*</span></h3>
+                <input type="tel" placeholder="### ### ####">
+                
+                <h3>Parent email:<span>*</span></h3>
+                <input type="email">
+                
+                <h3>Preferred sport:<span>*</span></h3>
+                <input type="text">
+                
+                <div class="captcha-wrapper">
+                    <div class="captcha-container">
+                        <div class="captcha-left">
+                            <input type="checkbox" class="captcha-checkbox" id="verification">
+                            <label for="verification" class="captcha-text">I'm not a robot</label>
+                        </div>
+                        <div class="captcha-right">
+                            <div class="captcha-logo"></div>
+                            <div class="captcha-brand-text">reCAPTCHA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="submit-wrapper">
+                    <button type="submit" class="submit-btn">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

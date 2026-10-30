@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .Register {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(65, 60, 197);
+      }
+      .maincontainer1 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: 0px solid black;
+        border-radius: 20px;
+        padding: 15px;
+        background-color: azure;
+      }
+      .personalDetailscontainer,
+      .IdentityDetailscontainer {
+        display: flex;
+        gap: 20px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5px;
+      }
+
+      .SUBMIT {
+        padding: 10px;
+        margin-right: 80%;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <section class="Register">
+        <div class="maincontainer1">
+          <div class="headingcontainer">
+            <h1>Register</h1>
+            <h3>Personal Details!!</h3>
+          </div>
+          <div class="personalDetailscontainer">
+            <div class="container bx2">
+              <label for="Username">Full name:</label><br />
+              <input
+                type="text"
+                id="Username"
+                placeholder="Enter Name"
+                required
+              /><br />
+
+              <label for="Mobile">Mobile no.</label><br />
+              <input
+                type="tel"
+                id="mobile"
+                placeholder="Enter mobile no."
+                required
+              /><br />
+            </div>
+            <div class="container bx3">
+              <label for="DOB">Date of Birth</label><br />
+              <input
+                type="date"
+                id="DOB"
+                placeholder="Enter DOB"
+                required
+              /><br />
+
+              <label for="gender">Gender</label><br />
+              <input
+                type="text"
+                id="gender"
+                placeholder="enter gender"
+                required
+              /><br />
+            </div>
+            <div class="container bx4">
+              <label for="mail">Full Email:</label><br />
+              <input
+                type="email"
+                id="mail"
+                placeholder="Enter Email"
+                required
+              /><br />
+
+              <label for="occupation">Occupation</label><br />
+              <input
+                type="text"
+                id="occ"
+                placeholder="Enter Occupation"
+                required
+              /><br />
+            </div>
+          </div>
+
+          <h3>Identity Details</h3>
+
+          <div class="IdentityDetailscontainer">
+            <div class="container bx2">
+              <label for="IDtype">IDtype:</label><br />
+              <input
+                type="text"
+                id="IDtyp"
+                placeholder="Enter Id type"
+                required
+              /><br />
+
+              <label for="issuedate">Issue Date</label><br />
+              <input
+                type="date"
+                id="issuedate"
+                placeholder="Enter issue date"
+                required
+              /><br />
+            </div>
+            <div class="container bx3">
+              <label for="idno">ID number</label><br />
+              <input
+                type="text"
+                id="ID"
+                placeholder="Enter Id no"
+                required
+              /><br />
+
+              <label for="state">Issue State</label><br />
+              <input
+                type="text"
+                id="state"
+                placeholder="enter issue state"
+                required
+              /><br />
+            </div>
+            <div class="container bx4">
+              <label for="auth">issue authoority:</label><br />
+              <input
+                type="text"
+                id="issueauth"
+                placeholder="Enter issue department"
+                required
+              /><br />
+
+              <label for="Expire">Expiry Date</label><br />
+              <input
+                type="date"
+                id="exp"
+                placeholder="Enter Expiry Date"
+                required
+              /><br />
+            </div>
+          </div>
+          <button type="submit" class="SUBMIT">Register --></button><br />
+        </div>
+      </section>
+    </form>
+  </body>
+</html>
