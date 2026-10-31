@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group Header</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #202c33;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      width: 100%;
+      min-height: 72px;
+      padding: 10px 20px;
+      background: #202020;
+      color: #e9edef;
+      border-bottom: 1px solid #3b4a54;
+    }
+
+    .container1 {
+      flex-shrink: 0;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #3b202b;
+      color: #f34f68;
+      font-size: 20px;
+    }
+
+    .container2 {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .group-info {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .container2 h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .container2 h4 {
+      font-size: 14px;
+      font-weight: 400;
+      color: #aebac1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .container3 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    select {
+      background: #202020;
+      color: #e9edef;
+      border: 1px solid #414141;
+      border-radius: 25px;
+      padding: 10px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .add-list {
+      min-width: 165px;
+    }
+
+    .icon-button {
+      width: 42px;
+      height: 42px;
+      border: none;
+      border-radius: 50%;
+      background: transparent;
+      color: #e9edef;
+      font-size: 19px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .icon-button:hover,
+    .video-button:hover {
+      background: #353535;
+    }
+
+    .video-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      color: #e9edef;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .video-button .fa-chevron-down {
+      font-size: 12px;
+    }
+
+    .container4 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-left: 12px;
+      border-left: 1px solid #393939;
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        gap: 12px;
+        padding: 10px 12px;
+      }
+
+      .container3 {
+        gap: 4px;
+      }
+
+      .add-list {
+        min-width: auto;
+        max-width: 120px;
+      }
+
+      .container2 h3 {
+        font-size: 15px;
+      }
+
+      .container2 h4 {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        gap: 10px;
+      }
+
+      .container1 {
+        width: 40px;
+        height: 40px;
+      }
+
+      .add-list {
+        display: none;
+      }
+
+      .container3 {
+        gap: 0;
+      }
+
+      .container4 {
+        padding-left: 5px;
+        gap: 0;
+      }
+
+      .video-button {
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container">
+
+    <!-- Group avatar -->
+    <div class="container1">
+      <i class="fa-solid fa-user-group"></i>
+    </div>
+
+    <!-- Group name and members -->
+    <div class="container2">
+      <button class="group-info" type="button">
+        <h3>B101-WS-MERN-JFP</h3>
+        <h4>
+          ram , shyam , hari , kanti
+        </h4>
+      </button>
+    </div>
+
+    <!-- Add to list and video call -->
+    <div class="container3">
+      <select class="add-list" id="Addto" name="Addto"
+        aria-label="Add to list">
+        <option value="Add">▣ Add to list</option>
+        <option value="ram">Ram</option>
+        <option value="shyam">Shyam</option>
+        <option value="hari">Hari</option>
+      </select>
+
+      <button class="video-button" type="button"
+        aria-label="Video call">
+        <i class="fa-solid fa-video"></i>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+
+    <!-- Search and more options -->
+    <div class="container4">
+      <button class="icon-button" type="button"
+        aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+      <button class="icon-button" type="button"
+        aria-label="More options">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </button>
+    </div>
+
+  </header>
+</body>
+</html>

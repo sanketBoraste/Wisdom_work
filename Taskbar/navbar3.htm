@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .container {
+            background-color: rgb(130, 208, 191);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 13px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            color: red;
+        }
+
+        ul li a:focus {
+            color: red;
+            outline: 2px solid red;
+            outline-offset: 2px;
+        }
+
+        .rightcontainer button {
+            background-color: orange;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="leftcontainer">
+                <img src="./Images/Wisdom.webp" alt="Wisdom Logo" height="100px" width="140px">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Placement</a></li>
+                    <li><a href="#">Internship</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Hire From Us</a></li>
+                </ul>
+            </nav>
+            <div class="rightcontainer">
+                <button>Contact us</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>   

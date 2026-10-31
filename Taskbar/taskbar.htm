@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkedIn Navbar</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    .navbar {
+      width: 100%;
+      min-height: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 25px;
+      border-bottom: 1px solid #e0e0e0;
+      background: #fff;
+      gap: 20px;
+    }
+
+    .left-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .linkedin-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 39px;
+      height: 39px;
+      background: #0a66c2;
+      color: white;
+      border-radius: 2px;
+      font-size: 29px;
+      font-weight: bold;
+      letter-spacing: -2px;
+      text-decoration: none;
+      padding-right: 3px;
+    }
+
+    .search-box {
+      height: 40px;
+      width: 320px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 15px;
+      border: 1px solid #b7b7b7;
+      border-radius: 25px;
+      background: #fff;
+      transition: box-shadow 0.2s;
+    }
+
+    .search-box:focus-within {
+      box-shadow: 0 0 0 1px #666;
+    }
+
+    .search-box i {
+      color: #222;
+      font-size: 18px;
+    }
+
+    .search-box input {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      background: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: stretch;
+      height: 85px;
+      gap: 0;
+    }
+
+    .nav-item {
+      position: relative;
+      min-width: 85px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 8px 10px;
+      color: #666;
+      text-decoration: none;
+      font-size: 13px;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .nav-item i {
+      font-size: 23px;
+      line-height: 25px;
+    }
+
+    .nav-item:hover {
+      color: #111;
+    }
+
+    .nav-item.active {
+      color: #191919;
+      border-bottom: 2px solid #191919;
+    }
+
+    .icon-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .badge {
+      position: absolute;
+      top: -8px;
+      right: -12px;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid white;
+      border-radius: 12px;
+      background: #d11124;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .profile-img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #ddd;
+    }
+
+    .profile-label {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .profile-label i {
+      font-size: 11px;
+    }
+
+    .business-section {
+      display: flex;
+      align-items: stretch;
+      height: 60px;
+      border-left: 1px solid #e0e0e0;
+      padding-left: 5px;
+    }
+
+    .business-section .nav-item {
+      min-width: 90px;
+    }
+
+    .business-section .nav-item i {
+      font-size: 23px;
+    }
+
+    .premium {
+      min-width: 155px;
+      color: #666;
+    }
+
+    .premium-icon {
+      color: #c58b16;
+    }
+
+    .premium:hover {
+      color: #333;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 1200px) {
+      .navbar {
+        justify-content: space-between;
+        gap: 10px;
+        padding: 0 15px;
+      }
+
+      .search-box {
+        width: 220px;
+      }
+
+      .nav-item {
+        min-width: 70px;
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+
+      .premium {
+        min-width: 115px;
+      }
+    }
+
+    @media (max-width: 950px) {
+      .search-box {
+        width: 40px;
+        padding: 0 10px;
+        border-color: transparent;
+      }
+
+      .search-box input {
+        display: none;
+      }
+
+      .nav-item {
+        min-width: 58px;
+        font-size: 11px;
+      }
+
+      .nav-item i {
+        font-size: 21px;
+      }
+
+      .premium {
+        display: none;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        min-height: auto;
+        flex-wrap: wrap;
+        padding: 10px;
+        gap: 5px;
+      }
+
+      .left-section {
+        width: 100%;
+      }
+
+      .search-box {
+        flex: 1;
+        width: auto;
+        border: 1px solid #bbb;
+      }
+
+      .search-box input {
+        display: block;
+      }
+
+      .nav-links {
+        width: 100%;
+        height: 65px;
+        justify-content: space-around;
+      }
+
+      .nav-item {
+        min-width: 0;
+        flex: 1;
+        padding: 5px 2px;
+        font-size: 10px;
+      }
+
+      .nav-item i {
+        font-size: 19px;
+      }
+
+      .business-section {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+
+    <!-- Logo and search -->
+    <div class="left-section">
+      <a href="#" class="linkedin-logo" aria-label="LinkedIn">in</a>
+
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" placeholder="Search" aria-label="Search" />
+      </div>
+    </div>
+
+    <!-- Main navigation -->
+    <nav class="nav-links" aria-label="Main navigation">
+
+      <a href="#" class="nav-item active">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <span class="icon-wrap">
+          <i class="fa-solid fa-user-group"></i>
+          <span class="badge">5</span>
+        </span>
+        <span>My Network</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Jobs</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <span class="icon-wrap">
+          <i class="fa-solid fa-comment-dots"></i>
+        </span>
+        <span>Messaging</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <span class="icon-wrap">
+          <i class="fa-solid fa-bell"></i>
+          <span class="badge">25</span>
+        </span>
+        <span>Notifications</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <img
+          class="profile-img"
+          src="https://i.pravatar.cc/80?img=47"
+          alt="Profile"
+        />
+        <span class="profile-label">
+          Me <i class="fa-solid fa-caret-down"></i>
+        </span>
+      </a>
+
+    </nav>
+
+    <div class="business-section">
+
+      <a href="#" class="nav-item">
+        <i class="fa-solid fa-grip"></i>
+        <span class="profile-label">
+          For Business <i class="fa-solid fa-caret-down"></i>
+        </span>
+      </a>
+
+      <a href="#" class="nav-item premium">
+        <i class="fa-solid fa-square premium-icon"></i>
+        <span>Try Premium for ₹0</span>
+      </a>
+
+    </div>
+
+  </header>
+
+</body>
+</html>
