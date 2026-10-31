@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register</title>
+  <style>
+    * { margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; 
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #c0c3bd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      width: 800px;
+      height: 420px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .left-panel {
+      flex: 1;
+      background: #1a6b6a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      border-radius: 0 100px 100px 0;
+    }
+
+    .left-panel h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .left-panel p {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-bottom: 30px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .btn {
+      padding: 12px 40px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn-signin {
+      background: #a8e063;
+      color: #1a6b6a;
+    }
+
+    .right-panel {
+      flex: 1.2;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px 40px;
+    }
+
+    .right-panel h3 {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .social-btn:hover { transform: scale(1.1); }
+    .social-btn.gplus { background: #dd4b39; }
+    .social-btn.facebook { background: #4267b2; }
+    .social-btn.linkedin { background: #0077b5; }
+
+    .divider {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #999;
+      margin-bottom: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus {
+      border-color: #1a6b6a;
+    }
+
+    .btn-signup {
+      margin-top: 10px;
+      background: #1a6b6a;
+      color: #fff;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="left-panel">
+      <h2>Welcome Back!</h2>
+      <p>Provide your personal details to use all features</p>
+      <button class="btn btn-signin">SIGN IN</button>
+    </div>
+
+    <div class="right-panel">
+      <h3>Register With</h3>
+
+      <div class="social-buttons">
+        <button class="social-btn gplus" title="Google+">G+</button>
+        <button class="social-btn facebook" title="Facebook">f</button>
+        <button class="social-btn linkedin" title="LinkedIn">in</button>
+      </div>
+
+      <div class="divider">OR</div>
+
+      <form>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn btn-signup">SIGN UP</button>
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>   
