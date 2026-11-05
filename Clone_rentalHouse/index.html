@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate - Find Your Dream Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="logo" href="#"><span class="mark">&#8962;</span>Logo</a>
+
+      <nav class="menu">
+        <a class="active" href="#">Home</a>
+        <a href="#properties">Explore</a>
+        <a href="#why">About Us</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+
+      <a class="btn" href="#inquiry">Request a call</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-box">
+        <h1>YOUR DREAM HOME</h1>
+        <p>IS ONE CLICK AWAY</p>
+
+        <div class="pills">
+          <a class="pill active" href="#properties">All units</a>
+          <a class="pill" href="#properties">For rent</a>
+          <a class="pill" href="#properties">For sale</a>
+        </div>
+
+        <form class="search" action="#properties">
+          <label>Looking for
+            <select name="type">
+              <option>Property Type</option>
+              <option>Apartment</option>
+              <option>Villa</option>
+              <option>House</option>
+              <option>Office</option>
+            </select>
+          </label>
+          <label>Location
+            <select name="city">
+              <option>All Cities</option>
+              <option>Austin</option>
+              <option>Dallas</option>
+              <option>Houston</option>
+              <option>San Antonio</option>
+            </select>
+          </label>
+          <label>Property size
+            <select name="beds">
+              <option>Bedrooms</option>
+              <option>1 bedroom</option>
+              <option>2 bedrooms</option>
+              <option>3 bedrooms</option>
+              <option>4+ bedrooms</option>
+            </select>
+          </label>
+          <label>Budget
+            <select name="price">
+              <option>Max. Price</option>
+              <option>Under $100,000</option>
+              <option>$100,000 - $250,000</option>
+              <option>$250,000 - $500,000</option>
+              <option>$500,000+</option>
+            </select>
+          </label>
+          <button class="btn" type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section wrap" id="properties">
+      <h2 class="h2">Explore Our Properties</h2>
+      <p class="sub">Enjoy the variety of 100+ Different properties in the market!</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="photo">
+            <img src="assets/prop1.jpg" alt="Light and modern house">
+            <span class="tag rent">FOR RENT</span>
+            <p class="facts">3 beds &middot; 2 baths &middot; 1,950 m&sup2;</p>
+          </div>
+          <h3>Light and modern house</h3>
+          <p class="place">7409 Knollwood Cove, Austin, TX</p>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="assets/prop2.jpg" alt="Contemporary family home">
+            <span class="tag sale">FOR SALE</span>
+            <p class="facts">4 beds &middot; 2 baths &middot; 2,100 m&sup2;</p>
+          </div>
+          <h3>Contemporary family home</h3>
+          <p class="place">118 Oak Ridge, Dallas, TX</p>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="assets/prop3.jpg" alt="Modern villa with a pool">
+            <span class="tag rent">FOR RENT</span>
+            <p class="facts">3 beds &middot; 2 baths &middot; 1,950 m&sup2;</p>
+          </div>
+          <h3>Modern villa with a pool</h3>
+          <p class="place">22 Palm Spring, Austin, TX</p>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="assets/prop4.jpg" alt="Bright house with large windows">
+            <span class="tag rent">FOR RENT</span>
+            <p class="facts">2 beds &middot; 1 bath &middot; 1,200 m&sup2;</p>
+          </div>
+          <h3>Bright house with large windows</h3>
+          <p class="place">55 Sunset Blvd, Houston, TX</p>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="assets/prop5.jpg" alt="Modern house with a yard">
+            <span class="tag rent">FOR RENT</span>
+            <p class="facts">3 beds &middot; 2 baths &middot; 1,800 m&sup2;</p>
+          </div>
+          <h3>Modern house with a yard</h3>
+          <p class="place">91 Maple Street, Austin, TX</p>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="assets/prop6.jpg" alt="Two-storey house with a driveway">
+            <span class="tag rent">FOR RENT</span>
+            <p class="facts">4 beds &middot; 3 baths &middot; 2,400 m&sup2;</p>
+          </div>
+          <h3>Two-storey family house</h3>
+          <p class="place">7 Green Park, San Antonio, TX</p>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="assets/prop7.jpg" alt="Home with a garden terrace">
+            <span class="tag sale">FOR SALE</span>
+            <p class="facts">3 beds &middot; 2 baths &middot; 1,950 m&sup2;</p>
+          </div>
+          <h3>Home with a garden terrace</h3>
+          <p class="place">340 Hill View, Dallas, TX</p>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="assets/prop8.jpg" alt="Minimalist house with warm lighting">
+            <span class="tag sale">FOR SALE</span>
+            <p class="facts">3 beds &middot; 2 baths &middot; 1,950 m&sup2;</p>
+          </div>
+          <h3>Minimalist modern house</h3>
+          <p class="place">19 Cedar Lane, Austin, TX</p>
+        </article>
+      </div>
+
+      <a class="load" href="#properties">Load More</a>
+    </section>
+
+    <section class="wide wrap">
+      <img class="w1" src="assets/wide1.jpg" alt="Spacious living room">
+      <img class="w2" src="assets/wide2.jpg" alt="Bright interior">
+      <div class="wcopy">
+        <h2 class="h2">Wide Selection Of Properties</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+        <span class="line"></span>
+      </div>
+      <img class="w3" src="assets/wide3.jpg" alt="Open plan kitchen">
+      <div class="w4">
+        <img src="assets/wide2.jpg" alt="Comfortable bedroom">
+        <img src="assets/wide3.jpg" alt="Modern dining area">
+      </div>
+    </section>
+
+    <section class="why" id="why">
+      <div class="wrap why-in">
+        <div class="reasons">
+          <h2 class="h2">Why Our Service Is The Perfect Choice?</h2>
+
+          <div class="reason">
+            <span>01.</span>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>
+          </div>
+
+          <div class="reason">
+            <span>02.</span>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>
+          </div>
+
+          <div class="reason">
+            <span>03.</span>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>
+          </div>
+        </div>
+
+        <form class="inquiry" id="inquiry" action="#">
+          <h3>Real Estate Inquiry Form</h3>
+
+          <label>Inquiry Type
+            <select name="type">
+              <option>Renting Property</option>
+              <option>Buying Property</option>
+              <option>Selling Property</option>
+            </select>
+          </label>
+          <label>Name
+            <input type="text" name="name" placeholder="John Doe">
+          </label>
+          <label>Email
+            <input type="email" name="email" placeholder="example@domain.com">
+          </label>
+          <label>Phone (Optional)
+            <input type="tel" name="phone" placeholder="+1 (123) 456-0509">
+          </label>
+          <label>Message
+            <textarea name="message" placeholder="Please enter your message"></textarea>
+          </label>
+
+          <button class="btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section wrap featured">
+      <h2 class="h2">Featured Listings</h2>
+      <p class="sub">Browse our wide range of featured properties.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="photo">
+            <img src="assets/prop5.jpg" alt="Featured modern house">
+            <span class="tag rent">FOR RENT</span>
+            <p class="facts">3 beds &middot; 2 baths &middot; 1,800 m&sup2;</p>
+          </div>
+          <h3>Modern house with a yard</h3>
+          <p class="place">91 Maple Street, Austin, TX</p>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="assets/prop6.jpg" alt="Featured contemporary home">
+            <span class="tag rent">FOR RENT</span>
+            <p class="facts">4 beds &middot; 3 baths &middot; 2,400 m&sup2;</p>
+          </div>
+          <h3>Two-storey family house</h3>
+          <p class="place">7 Green Park, San Antonio, TX</p>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="assets/prop7.jpg" alt="Featured house with a terrace">
+            <span class="tag sale">FOR SALE</span>
+            <p class="facts">3 beds &middot; 2 baths &middot; 1,950 m&sup2;</p>
+          </div>
+          <h3>Home with a garden terrace</h3>
+          <p class="place">340 Hill View, Dallas, TX</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <h2 class="h2">Testimonials</h2>
+      <p class="sub">What Our Clients Say About Us!</p>
+
+      <div class="quotes">
+        <figure class="quote">
+          <img src="assets/avatar1.jpg" alt="David Elson">
+          <figcaption><b>David Elson</b><span>7th July 2022</span></figcaption>
+          <blockquote>&ldquo;Very professional broker with great apartments selections&rdquo;</blockquote>
+        </figure>
+
+        <figure class="quote">
+          <img src="assets/avatar2.jpg" alt="Stephanie Nicol">
+          <figcaption><b>Stephanie Nicol</b><span>7th July 2022</span></figcaption>
+          <blockquote>&ldquo;Very good, they offer the best prices of properties and customer service&rdquo;</blockquote>
+        </figure>
+
+        <figure class="quote">
+          <img src="assets/avatar3.png" alt="Allen Jordan">
+          <figcaption><b>Allen Jordan</b><span>7th July 2022</span></figcaption>
+          <blockquote>&ldquo;Good experience and good customer welcoming reflects level of the broker&rdquo;</blockquote>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="wrap">
+      <div class="news">
+        <h2>Newsletter Signup</h2>
+        <input type="email" placeholder="Enter your email" aria-label="Enter your email">
+      </div>
+
+      <div class="foot">
+        <div class="about">
+          <a class="logo light" href="#"><span class="mark">&#8962;</span>Logo</a>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </div>
+
+        <div class="links">
+          <div>
+            <h3>Explore</h3>
+            <a href="#properties">Lorem Ipsum</a>
+            <a href="#properties">Lorem Ipsum</a>
+            <a href="#properties">Lorem Ipsum</a>
+            <a href="#properties">Lorem Ipsum</a>
+          </div>
+          <div>
+            <h3>Services</h3>
+            <a href="#why">Lorem Ipsum</a>
+            <a href="#why">Lorem Ipsum</a>
+            <a href="#why">Lorem Ipsum</a>
+            <a href="#why">Lorem Ipsum</a>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <a href="#contact">Lorem Ipsum</a>
+            <a href="#contact">Lorem Ipsum</a>
+            <a href="#contact">Lorem Ipsum</a>
+            <a href="#contact">Lorem Ipsum</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="copy">&copy; Lorem Ipsum - All rights reserved</p>
+  </footer>
+
+</body>
+</html>
