@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CSS Grid</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 50px 200px 130px 70px;
+            gap: 5px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .box {
+            background-color: turquoise;
+            border: 3px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .navbar {
+            grid-column: 1 / 5;
+            background-color: aquamarine;
+        }
+
+        .sidebar {
+            grid-column: 1;
+            grid-row: 2 / 5;
+            background-color: aqua;
+        }
+
+        .main {
+            grid-column: 2 / 5;
+            grid-row: 2;
+            background-color: paleturquoise;
+        }
+
+        .content1 {
+            grid-column: 2;
+            grid-row: 3;
+            background-color: aquamarine;
+        }
+
+        .content2 {
+            grid-column: 3;
+            grid-row: 3;
+            background-color: aquamarine;
+        }
+
+        .content3 {
+            grid-column: 4;
+            grid-row: 3;
+            background-color: aquamarine;
+        }
+
+        .footer {
+            grid-column: 2 / 5;
+            grid-row: 4;
+            background-color: mediumspringgreen;
+        }
+
+        /* Mobile Responsive */
+
+        @media (max-width: 600px) {
+
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 50px 50px 200px 100px 100px 100px 60px;
+            }
+
+            .navbar {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .sidebar {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            .main {
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            .content1 {
+                grid-column: 1;
+                grid-row: 4;
+            }
+
+            .content2 {
+                grid-column: 1;
+                grid-row: 5;
+            }
+
+            .content3 {
+                grid-column: 1;
+                grid-row: 6;
+            }
+
+            .footer {
+                grid-column: 1;
+                grid-row: 7;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box navbar">NAVBAR</div>
+
+        <div class="box sidebar">SIDEBAR</div>
+
+        <div class="box main">MAIN</div>
+
+        <div class="box content1">CONTENT 1</div>
+
+        <div class="box content2">CONTENT 2</div>
+
+        <div class="box content3">CONTENT 3</div>
+
+        <div class="box footer">FOOTER</div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anime Image Grid</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 150px);
+            grid-template-rows: repeat(3, 150px);
+            gap: 10px;
+            padding: 20px;
+            background-color: #eee;
+            width: fit-content;
+            margin: 20px;
+        }
+
+        .box {
+            overflow: hidden;
+            border: 4px solid white;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img1 {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .img2 {
+            grid-column: 2;
+            grid-row: 1 / 3;
+            z-index: 2;
+        }
+
+        .img3 {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .img4 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .img5 {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .img6 {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        .img7 {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        .img8 {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        .img9 {
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box img1">
+            <img src="./Img/anime1.jpg" alt="img1">
+        </div>
+
+        <div class="box img2">
+            <img src="./Img/anime2.jpg" alt="img2">
+        </div>
+
+        <div class="box img3">
+            <img src="./Img/anime3.jpg" alt="img3">
+        </div>
+
+        <div class="box img4">
+            <img src="./Img/anime4.jpg" alt="img4">
+        </div>
+
+        <div class="box img5">
+            <img src="./Img/anime5.jpg" alt="img5">
+        </div>
+
+        <div class="box img6">
+            <img src="./Img/anime6.jpg" alt="img6">
+        </div>
+
+        <div class="box img7">
+            <img src="./Img/anime7.jpg" alt="img7">
+        </div>
+
+        <div class="box img8">
+            <img src="./Img/anime8.jpg" alt="img8">
+        </div>
+
+        <div class="box img9">
+            <img src="./Img/anime9.jpg" alt="img9">
+        </div>
+
+    </div>
+
+</body>
+</html>
